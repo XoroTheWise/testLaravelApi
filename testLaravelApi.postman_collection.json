@@ -1,0 +1,276 @@
+{
+	"info": {
+		"_postman_id": "e232eb5f-91df-4187-805d-cb65db3913ba",
+		"name": "testLaravelApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://testlaravelapi/api/auth/login?email=test@mail.ru&password=123456789",
+					"protocol": "http",
+					"host": [
+						"testlaravelapi"
+					],
+					"path": [
+						"api",
+						"auth",
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "test@mail.ru"
+						},
+						{
+							"key": "password",
+							"value": "123456789"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Equipment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vdGVzdGxhcmF2ZWxhcGkvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NTE2NTg4NjUsImV4cCI6MTY1MTY2MjQ2NSwibmJmIjoxNjUxNjU4ODY1LCJqdGkiOiIwZU1DYVhQTExnZGRNVTRqIiwic3ViIjoiNiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.0fo51XF6REhhJlyZwUlVQW5iASh0vCPUIwknyfb1zYw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://testlaravelapi/api/equipment?page=1",
+					"protocol": "http",
+					"host": [
+						"testlaravelapi"
+					],
+					"path": [
+						"api",
+						"equipment"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "id",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "type_id",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "note",
+							"value": "Minima tempora.",
+							"disabled": true
+						},
+						{
+							"key": "number",
+							"value": "AAAAAAAAAA",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Equipment ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vdGVzdGxhcmF2ZWxhcGkvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NTE2NTg4NjUsImV4cCI6MTY1MTY2MjQ2NSwibmJmIjoxNjUxNjU4ODY1LCJqdGkiOiIwZU1DYVhQTExnZGRNVTRqIiwic3ViIjoiNiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.0fo51XF6REhhJlyZwUlVQW5iASh0vCPUIwknyfb1zYw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://testlaravelapi/api/equipment/6",
+					"protocol": "http",
+					"host": [
+						"testlaravelapi"
+					],
+					"path": [
+						"api",
+						"equipment",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Equipment Create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vdGVzdGxhcmF2ZWxhcGkvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NTE2NTcyMjksImV4cCI6MTY1MTY2MDgyOSwibmJmIjoxNjUxNjU3MjI5LCJqdGkiOiJRRXZhT1dIM3VLWWNYOFVOIiwic3ViIjoiNiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.OnIX6Akgq6ZoBGokw_anBLgtX1KwSU61nlpCIhuxP8o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type_id\": \"3\",\r\n    \"number\": [\r\n        \"5FFDSA@RRR\",\r\n        \"5FSDWA-RFF\",\r\n        \"5FDDDD@RRR\"\r\n    ],\r\n    \"note\": \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://testlaravelapi/api/equipment",
+					"protocol": "http",
+					"host": [
+						"testlaravelapi"
+					],
+					"path": [
+						"api",
+						"equipment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Equipmetn Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vdGVzdGxhcmF2ZWxhcGkvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NTE2NTcyMjksImV4cCI6MTY1MTY2MDgyOSwibmJmIjoxNjUxNjU3MjI5LCJqdGkiOiJRRXZhT1dIM3VLWWNYOFVOIiwic3ViIjoiNiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.OnIX6Akgq6ZoBGokw_anBLgtX1KwSU61nlpCIhuxP8o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type_id\": \"3\",\r\n    \"number\": \"5FFDSA@RGG\",\r\n    \"note\": \"5555\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://testlaravelapi/api/equipment/6",
+					"protocol": "http",
+					"host": [
+						"testlaravelapi"
+					],
+					"path": [
+						"api",
+						"equipment",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Equipment Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vdGVzdGxhcmF2ZWxhcGkvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NTE2NTcyMjksImV4cCI6MTY1MTY2MDgyOSwibmJmIjoxNjUxNjU3MjI5LCJqdGkiOiJRRXZhT1dIM3VLWWNYOFVOIiwic3ViIjoiNiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.OnIX6Akgq6ZoBGokw_anBLgtX1KwSU61nlpCIhuxP8o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://testlaravelapi/api/equipment/6",
+					"protocol": "http",
+					"host": [
+						"testlaravelapi"
+					],
+					"path": [
+						"api",
+						"equipment",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Type",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vdGVzdGxhcmF2ZWxhcGkvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NTE2NTcyMjksImV4cCI6MTY1MTY2MDgyOSwibmJmIjoxNjUxNjU3MjI5LCJqdGkiOiJRRXZhT1dIM3VLWWNYOFVOIiwic3ViIjoiNiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.OnIX6Akgq6ZoBGokw_anBLgtX1KwSU61nlpCIhuxP8o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://testlaravelapi/api/type?page=1",
+					"protocol": "http",
+					"host": [
+						"testlaravelapi"
+					],
+					"path": [
+						"api",
+						"type"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "name",
+							"value": "Florida Krajcik",
+							"disabled": true
+						},
+						{
+							"key": "mask",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
